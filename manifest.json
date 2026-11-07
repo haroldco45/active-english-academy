@@ -1,0 +1,15 @@
+{
+  "name": "Active English Academy",
+  "short_name": "Active English",
+  "description": "Inglés 70% conversacional en Caucasia para niños, profesionales y empresarios.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#2b3468",
+  "theme_color": "#2b3468",
+  "lang": "es-CO",
+  "icons": [
+    {"src": "img/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"},
+    {"src": "img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+  ]
+}

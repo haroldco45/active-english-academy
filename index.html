@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Active English Academy · Inglés conversacional en Caucasia</title>
+<meta name="description" content="Programa de inglés 70% conversacional para niños de 4 a 17 años, profesionales y empresarios en Caucasia. Presencial, virtual y mixta. Grupos reducidos.">
+<meta name="theme-color" content="#2b3468">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="img/icon-192.png">
+<link rel="apple-touch-icon" href="img/icon-192.png">
+
+<!-- Vista previa del enlace (OG / Twitter) -->
+<meta property="og:title" content="Active English Academy · Te comunica con el mundo">
+<meta property="og:description" content="Inglés 70% conversacional en Caucasia para niños de 4 a 17 años, profesionales y empresarios. Presencial, virtual y mixta. Inscríbete: 311 708 2496.">
+<meta property="og:image" content="https://active-english-academy.netlify.app/img/og.jpg">
+<meta property="og:url" content="https://active-english-academy.netlify.app/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Active English Academy · Te comunica con el mundo">
+<meta name="twitter:description" content="Inglés 70% conversacional en Caucasia. Niños, profesionales y empresarios. Presencial, virtual y mixta.">
+<meta name="twitter:image" content="https://active-english-academy.netlify.app/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800;900&family=Merriweather:ital,wght@1,700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#2b3468;--navy2:#1d2450;--red:#d62b34;--red2:#ff6b74;--ink:#1b1f33;--soft:#f3f4fa;--line:#e3e5f0}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Barlow,system-ui,sans-serif;color:var(--ink);background:#fff;overflow-x:hidden}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:1100px;margin:auto;padding:0 20px}
+
+/* Barra superior */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:62px}
+.brand{font-weight:900;font-size:20px;color:var(--navy);text-decoration:none;letter-spacing:-.3px}
+.brand b{color:var(--red)}
+.bar nav{display:flex;gap:8px;align-items:center}
+.lang{border:2px solid var(--navy);background:#fff;color:var(--navy);font:800 13px Barlow,sans-serif;padding:6px 12px;border-radius:30px;cursor:pointer}
+.lang:hover{background:var(--navy);color:#fff}
+.btn{display:inline-block;border:0;cursor:pointer;font:800 16px Barlow,sans-serif;text-decoration:none;padding:14px 24px;border-radius:40px;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 8px 22px rgba(214,43,52,.35)}
+.btn-white{background:#fff;color:var(--navy)}
+.btn-line{background:transparent;border:2px solid #fff;color:#fff}
+.btn-sm{padding:9px 16px;font-size:14px}
+
+/* Portada */
+.hero{position:relative;background:linear-gradient(135deg,var(--navy2),var(--navy) 55%,#3a4790);color:#fff;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-12%;bottom:-40%;width:70%;height:120%;background:var(--red);transform:rotate(-24deg);opacity:.92;z-index:0}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;padding-top:50px;padding-bottom:50px}
+.tag{display:inline-block;background:rgba(255,255,255,.14);padding:6px 14px;border-radius:30px;font-weight:700;font-size:13px;letter-spacing:.5px;text-transform:uppercase}
+.hero h1{font-size:clamp(38px,6vw,64px);line-height:1;font-weight:900;margin:16px 0 10px;letter-spacing:-1px}
+.hero h1 span{color:var(--red2)}
+.slogan{font-family:Merriweather,serif;font-style:italic;font-size:20px;opacity:.9;margin-bottom:18px}
+.rotator{font-size:22px;font-weight:700;min-height:62px}
+.rotator b{color:#ffd23f;transition:opacity .4s}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.photos{position:relative;height:430px}
+.photos img{position:absolute;border-radius:22px;object-fit:cover;box-shadow:0 18px 40px rgba(0,0,0,.35);border:5px solid #fff}
+.ph1{width:62%;height:84%;left:0;top:0;animation:float 6s ease-in-out infinite}
+.ph2{width:52%;height:52%;right:0;bottom:0;animation:float 6s ease-in-out infinite 1.5s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.badge70{position:absolute;right:8%;top:6%;background:#ffd23f;color:var(--navy2);width:112px;height:112px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900;font-size:36px;line-height:.9;box-shadow:0 10px 26px rgba(0,0,0,.3);animation:pulse 2.4s infinite;z-index:2}
+.badge70 small{font-size:12px;font-weight:800;text-align:center}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+
+/* Cinta de frases */
+.ticker{background:var(--red);color:#fff;overflow:hidden;white-space:nowrap;font-weight:800;font-size:17px;padding:12px 0}
+.ticker div{display:inline-block;animation:tick 38s linear infinite}
+.ticker span{margin:0 26px}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+section{padding:64px 0}
+.kicker{color:var(--red);font-weight:800;text-transform:uppercase;letter-spacing:1px;font-size:14px}
+h2{font-size:clamp(28px,4vw,40px);font-weight:900;color:var(--navy);line-height:1.05;margin:6px 0 14px;letter-spacing:-.5px}
+.lead{font-size:18px;color:#4a4f68;max-width:700px}
+
+/* Programas */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(43,52,104,.15)}
+.card .top{height:150px;background-size:cover;background-position:center;position:relative}
+.card .top::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(29,36,80,.85))}
+.card .top b{position:absolute;left:16px;bottom:12px;color:#fff;font-size:22px;font-weight:900;z-index:1}
+.card .body{padding:18px}
+.card p{color:#4a4f68;font-size:16px}
+.age{display:inline-block;margin-top:10px;background:var(--soft);color:var(--navy);font-weight:800;padding:5px 12px;border-radius:20px;font-size:13px}
+
+/* Modalidades */
+.modes{background:var(--soft)}
+.modetabs{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0}
+.modetabs button{font:800 16px Barlow,sans-serif;padding:12px 22px;border-radius:40px;border:2px solid var(--navy);background:#fff;color:var(--navy);cursor:pointer}
+.modetabs button.on{background:var(--navy);color:#fff}
+.modebox{background:#fff;border-radius:22px;padding:26px;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;box-shadow:0 10px 30px rgba(43,52,104,.08)}
+.modebox h3{font-size:28px;color:var(--navy);font-weight:900}
+.modebox ul{margin:12px 0 0 18px;color:#4a4f68;font-size:17px;line-height:1.7}
+.modebox img{border-radius:16px;height:260px;width:100%;object-fit:cover}
+
+/* Cifras */
+.stats{background:var(--navy);color:#fff}
+.stats .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;text-align:center}
+.stat b{display:block;font-size:52px;font-weight:900;color:#ffd23f;line-height:1}
+.stat span{font-weight:600;opacity:.9}
+
+/* Frase del día */
+.daily{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+.phrase{background:linear-gradient(135deg,var(--red),#b51f28);color:#fff;border-radius:22px;padding:28px;position:relative;overflow:hidden}
+.phrase .en{font-size:30px;font-weight:900;line-height:1.15;margin:12px 0}
+.phrase .es{font-size:18px;opacity:.9;font-style:italic}
+.phrase .row{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+.today{font-size:13px;font-weight:700;opacity:.85;text-transform:uppercase;letter-spacing:.8px}
+
+/* Test de nivel */
+.quiz{background:#fff;border:2px solid var(--line);border-radius:22px;padding:26px}
+.quiz .q{font-size:20px;font-weight:800;color:var(--navy);margin:10px 0 14px}
+.opts{display:grid;gap:10px}
+.opts button{font:600 17px Barlow,sans-serif;text-align:left;padding:13px 16px;border-radius:14px;border:2px solid var(--line);background:#fff;cursor:pointer;transition:.15s}
+.opts button:hover{border-color:var(--navy)}
+.opts button.ok{background:#e6f7ec;border-color:#22a559}
+.opts button.bad{background:#fde8e9;border-color:var(--red)}
+.progress{height:8px;background:var(--soft);border-radius:8px;overflow:hidden}
+.progress i{display:block;height:100%;background:var(--red);width:0;transition:width .4s}
+.result{text-align:center}
+.result .lvl{font-size:56px;font-weight:900;color:var(--red);line-height:1;margin:10px 0}
+
+/* Sala de conversación */
+.room{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:center}
+.room img{border-radius:22px;height:380px;width:100%;object-fit:cover;box-shadow:0 18px 40px rgba(43,52,104,.18)}
+.chat{display:flex;flex-direction:column;gap:10px;margin-top:18px}
+.msg{max-width:80%;padding:12px 16px;border-radius:18px;font-size:17px;opacity:0;transform:translateY(10px);transition:.5s}
+.msg.show{opacity:1;transform:none}
+.msg.a{background:var(--soft);color:var(--navy);align-self:flex-start;border-bottom-left-radius:4px}
+.msg.b{background:var(--navy);color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+
+/* Inscripción */
+.signup{background:linear-gradient(135deg,var(--navy2),var(--navy));color:#fff}
+.signup h2{color:#fff}
+.form{background:#fff;color:var(--ink);border-radius:22px;padding:26px;display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}
+.form label{font-weight:700;font-size:14px;color:var(--navy);display:block;margin-bottom:5px}
+.form input,.form select,.form textarea{width:100%;font:500 16px Barlow,sans-serif;padding:12px 14px;border:2px solid var(--line);border-radius:12px}
+.form input:focus,.form select:focus,.form textarea:focus{outline:0;border-color:var(--navy)}
+.full{grid-column:1/-1}
+.privacy{font-size:13px;color:#5a5f78;display:flex;gap:8px;align-items:flex-start}
+.privacy input{width:auto;margin-top:3px}
+
+/* Ubicación */
+.place{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+.place iframe{width:100%;height:100%;min-height:320px;border:0;border-radius:22px}
+.info{background:var(--soft);border-radius:22px;padding:26px}
+.info p{font-size:18px;margin:10px 0}
+.info .links{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.expo{margin-top:20px;border-radius:16px;overflow:hidden;position:relative}
+.expo img{height:220px;width:100%;object-fit:cover;object-position:center 30%}
+.expo span{position:absolute;left:12px;bottom:12px;background:var(--red);color:#fff;font-weight:800;padding:6px 12px;border-radius:20px;font-size:13px}
+
+footer{background:var(--navy2);color:#c9cde6;text-align:center;padding:34px 20px;font-size:14px;line-height:1.8}
+footer b{color:#fff}
+.wa{position:fixed;right:16px;bottom:16px;z-index:60;background:#25d366;color:#fff;font:800 15px Barlow,sans-serif;padding:14px 20px;border-radius:40px;text-decoration:none;box-shadow:0 10px 24px rgba(0,0,0,.25);animation:pulse 2.6s infinite}
+#install{display:none}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:860px){
+ .hero .wrap,.daily,.room,.place,.modebox{grid-template-columns:1fr}
+ .grid3{grid-template-columns:1fr}
+ .stats .grid4{grid-template-columns:repeat(2,1fr);gap:26px}
+ .photos{height:340px}
+ .form{grid-template-columns:1fr}
+ .hide-m{display:none!important}
+ .hero::after{right:-40%;bottom:-60%;width:110%}
+ .room img{height:280px}
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="wrap bar">
+  <a href="#" class="brand">Active <b>English</b> Academy</a>
+  <nav>
+   <button class="btn btn-red btn-sm" id="install" data-es="Instalar app" data-en="Install app">Instalar app</button>
+   <a href="#inscripcion" class="btn btn-red btn-sm hide-m" data-es="Inscríbete" data-en="Sign up">Inscríbete</a>
+   <button class="lang" id="lang">EN</button>
+  </nav>
+ </div>
+</header>
+
+<section class="hero" style="padding:0">
+ <div class="wrap">
+  <div>
+   <span class="tag" data-es="Caucasia · Barrio El Carmen" data-en="Caucasia · El Carmen neighborhood">Caucasia · Barrio El Carmen</span>
+   <h1>Active English <span>Academy</span></h1>
+   <p class="slogan" data-es="Te comunica con el mundo" data-en="Connecting you with the world">Te comunica con el mundo</p>
+   <p class="rotator"><span data-es="Inglés 70% conversacional para" data-en="70% conversational English for">Inglés 70% conversacional para</span><br><b id="rot">niños de 4 a 17 años</b></p>
+   <div class="cta">
+    <a href="#inscripcion" class="btn btn-red" data-es="Quiero inscribirme" data-en="I want to sign up">Quiero inscribirme</a>
+    <a href="#test" class="btn btn-line" data-es="Mide tu nivel gratis" data-en="Free level test">Mide tu nivel gratis</a>
+   </div>
+  </div>
+  <div class="photos">
+   <img class="ph1" src="img/profe-nina.jpg" alt="Estudiantes de Active English Academy">
+   <img class="ph2" src="img/nino.jpg" alt="Niño estudiante de inglés">
+   <div class="badge70">70%<small data-es="conversa-<br>cional" data-en="conver-<br>sational">conversa-<br>cional</small></div>
+  </div>
+ </div>
+</section>
+
+<div class="ticker"><div id="tick"></div></div>
+
+<section id="programas">
+ <div class="wrap">
+  <p class="kicker reveal" data-es="Nuestros programas" data-en="Our programs">Nuestros programas</p>
+  <h2 class="reveal" data-es="Un inglés para cada etapa de la vida" data-en="English for every stage of life">Un inglés para cada etapa de la vida</h2>
+  <p class="lead reveal" data-es="Aquí se aprende hablando. El 70% de cada clase es conversación real, para que pierdas el miedo y te comuniques con seguridad." data-en="Here you learn by speaking. 70% of every class is real conversation, so you lose the fear and communicate with confidence.">Aquí se aprende hablando. El 70% de cada clase es conversación real, para que pierdas el miedo y te comuniques con seguridad.</p>
+  <div class="grid3">
+   <div class="card reveal"><div class="top" style="background-image:url(img/nino.jpg)"><b data-es="Niños" data-en="Kids">Niños</b></div><div class="body"><p data-es="Juegos, canciones y conversación para que los más pequeños aprendan inglés como su segundo idioma, desde temprano." data-en="Games, songs and conversation so the little ones learn English as a second language from an early age.">Juegos, canciones y conversación para que los más pequeños aprendan inglés como su segundo idioma, desde temprano.</p><span class="age" data-es="4 a 11 años" data-en="Ages 4 to 11">4 a 11 años</span></div></div>
+   <div class="card reveal"><div class="top" style="background-image:url(img/profe-nina.jpg);background-position:center 75%"><b data-es="Jóvenes" data-en="Teens">Jóvenes</b></div><div class="body"><p data-es="Refuerzo para el colegio, preparación para las pruebas y fluidez para viajar, estudiar o trabajar afuera." data-en="School support, test preparation and fluency to travel, study or work abroad.">Refuerzo para el colegio, preparación para las pruebas y fluidez para viajar, estudiar o trabajar afuera.</p><span class="age" data-es="12 a 17 años" data-en="Ages 12 to 17">12 a 17 años</span></div></div>
+   <div class="card reveal"><div class="top" style="background-image:url(img/profe-nina.jpg);background-position:center 15%"><b data-es="Profesionales y empresarios" data-en="Professionals & business">Profesionales y empresarios</b></div><div class="body"><p data-es="Inglés para reuniones, llamadas, correos, negocios y entrevistas. Horarios que se ajustan a tu trabajo." data-en="English for meetings, calls, emails, business and interviews. Schedules that fit your job.">Inglés para reuniones, llamadas, correos, negocios y entrevistas. Horarios que se ajustan a tu trabajo.</p><span class="age" data-es="Adultos" data-en="Adults">Adultos</span></div></div>
+  </div>
+ </div>
+</section>
+
+<section class="modes">
+ <div class="wrap">
+  <p class="kicker reveal" data-es="Modalidades" data-en="Formats">Modalidades</p>
+  <h2 class="reveal" data-es="Estudia como mejor te quede" data-en="Study the way that suits you">Estudia como mejor te quede</h2>
+  <div class="modetabs" id="tabs">
+   <button class="on" data-m="0" data-es="Presencial" data-en="In person">Presencial</button>
+   <button data-m="1" data-es="Virtual" data-en="Online">Virtual</button>
+   <button data-m="2" data-es="Mixta" data-en="Hybrid">Mixta</button>
+  </div>
+  <div class="modebox reveal">
+   <div><h3 id="mt"></h3><ul id="ml"></ul><a href="#inscripcion" class="btn btn-red" style="margin-top:18px" data-es="Reservar mi cupo" data-en="Book my spot">Reservar mi cupo</a></div>
+   <img id="mi" src="img/profe-nina.jpg" alt="Clase de inglés">
+  </div>
+ </div>
+</section>
+
+<section class="stats">
+ <div class="wrap grid4">
+  <div class="stat"><b class="count" data-to="70">0</b><span data-es="% de la clase conversando" data-en="% of class speaking">% de la clase conversando</span></div>
+  <div class="stat"><b class="count" data-to="4">0</b><span data-es="años, la edad para empezar" data-en="years old, the age to start">años, la edad para empezar</span></div>
+  <div class="stat"><b class="count" data-to="3">0</b><span data-es="modalidades de estudio" data-en="study formats">modalidades de estudio</span></div>
+  <div class="stat"><b class="count" data-to="1">0</b><span data-es="sala de conversación" data-en="conversation room">sala de conversación</span></div>
+ </div>
+</section>
+
+<section id="test">
+ <div class="wrap">
+  <p class="kicker reveal" data-es="Practica hoy" data-en="Practice today">Practica hoy</p>
+  <h2 class="reveal" data-es="Frase del día y test de nivel" data-en="Phrase of the day and level test">Frase del día y test de nivel</h2>
+  <div class="daily">
+   <div class="phrase reveal">
+    <p class="today" id="todayLbl"></p>
+    <p class="en" id="pEn"></p>
+    <p class="es" id="pEs"></p>
+    <div class="row">
+     <button class="btn btn-white btn-sm" id="listen" data-es="Escuchar pronunciación" data-en="Listen">Escuchar pronunciación</button>
+     <button class="btn btn-line btn-sm" id="nextP" data-es="Otra frase" data-en="Another phrase">Otra frase</button>
+    </div>
+   </div>
+   <div class="quiz reveal" id="quiz"></div>
+  </div>
+ </div>
+</section>
+
+<section style="background:var(--soft)">
+ <div class="wrap room">
+  <img src="img/estudiantes.jpg" alt="Sala de conversación" class="reveal">
+  <div>
+   <p class="kicker reveal" data-es="Sala de conversación · Grupos reducidos" data-en="Conversation room · Small groups">Sala de conversación · Grupos reducidos</p>
+   <h2 class="reveal" data-es="Pocos estudiantes, más tiempo para hablar" data-en="Fewer students, more time to speak">Pocos estudiantes, más tiempo para hablar</h2>
+   <p class="lead reveal" data-es="En grupos pequeños el profe te escucha, te corrige y te hace hablar en cada clase. Y en la sala de conversación practicas situaciones reales." data-en="In small groups the teacher listens to you, corrects you and gets you talking every class. In the conversation room you practice real situations.">En grupos pequeños el profe te escucha, te corrige y te hace hablar en cada clase. Y en la sala de conversación practicas situaciones reales.</p>
+   <div class="chat" id="chat"></div>
+  </div>
+ </div>
+</section>
+
+<section class="signup" id="inscripcion">
+ <div class="wrap">
+  <p class="kicker" style="color:#ffd23f" data-es="Preinscripción" data-en="Pre-registration">Preinscripción</p>
+  <h2 data-es="Separa tu cupo por WhatsApp" data-en="Save your spot on WhatsApp">Separa tu cupo por WhatsApp</h2>
+  <p class="lead" style="color:#d8dbef" data-es="Llena los datos y se abre WhatsApp con tu mensaje listo para la academia. Los grupos son reducidos." data-en="Fill in your details and WhatsApp opens with your message ready for the academy. Groups are small.">Llena los datos y se abre WhatsApp con tu mensaje listo para la academia. Los grupos son reducidos.</p>
+  <form class="form" id="form">
+   <div><label data-es="Nombre del estudiante" data-en="Student's name">Nombre del estudiante</label><input id="fName" required></div>
+   <div><label data-es="Edad" data-en="Age">Edad</label><input id="fAge" type="number" min="4" max="99" required></div>
+   <div><label data-es="Programa" data-en="Program">Programa</label>
+    <select id="fProg"><option data-es="Niños (4 a 11 años)" data-en="Kids (4 to 11)">Niños (4 a 11 años)</option><option data-es="Jóvenes (12 a 17 años)" data-en="Teens (12 to 17)">Jóvenes (12 a 17 años)</option><option data-es="Profesionales y empresarios" data-en="Professionals & business">Profesionales y empresarios</option></select></div>
+   <div><label data-es="Modalidad" data-en="Format">Modalidad</label>
+    <select id="fMode"><option data-es="Presencial" data-en="In person">Presencial</option><option data-es="Virtual" data-en="Online">Virtual</option><option data-es="Mixta" data-en="Hybrid">Mixta</option></select></div>
+   <div><label data-es="Horario preferido" data-en="Preferred schedule">Horario preferido</label>
+    <select id="fTime"><option data-es="Mañana" data-en="Morning">Mañana</option><option data-es="Tarde" data-en="Afternoon">Tarde</option><option data-es="Noche" data-en="Evening">Noche</option><option data-es="Fin de semana" data-en="Weekend">Fin de semana</option></select></div>
+   <div><label data-es="Nivel (si hiciste el test)" data-en="Level (if you took the test)">Nivel (si hiciste el test)</label><input id="fLvl" placeholder="—"></div>
+   <div class="full"><label data-es="Comentario (opcional)" data-en="Comment (optional)">Comentario (opcional)</label><textarea id="fMsg" rows="2"></textarea></div>
+   <label class="privacy full"><input type="checkbox" id="fOk" required><span data-es="Autorizo a Active English Academy a tratar mis datos solo para responder esta solicitud, conforme a la Ley 1581 de 2012 (Habeas Data). Esta app no guarda tus datos: se envían directo por WhatsApp." data-en="I authorize Active English Academy to process my data only to answer this request, under Colombian Law 1581 of 2012 (Habeas Data). This app does not store your data: it goes straight to WhatsApp.">Autorizo a Active English Academy a tratar mis datos solo para responder esta solicitud, conforme a la Ley 1581 de 2012 (Habeas Data). Esta app no guarda tus datos: se envían directo por WhatsApp.</span></label>
+   <div class="full"><button class="btn btn-red" type="submit" style="width:100%" data-es="Enviar por WhatsApp" data-en="Send via WhatsApp">Enviar por WhatsApp</button></div>
+  </form>
+ </div>
+</section>
+
+<section>
+ <div class="wrap place">
+  <div class="info reveal">
+   <p class="kicker" data-es="Visítanos" data-en="Visit us">Visítanos</p>
+   <h2 data-es="Estamos en el Barrio El Carmen" data-en="We are in El Carmen">Estamos en el Barrio El Carmen</h2>
+   <p><b data-es="Dirección:" data-en="Address:">Dirección:</b> Cra 2da #26-26, 2do piso, Barrio El Carmen, Caucasia, Antioquia</p>
+   <p><b data-es="Llámanos o escríbenos:" data-en="Call or text us:">Llámanos o escríbenos:</b> 311 708 2496</p>
+   <div class="links">
+    <a class="btn btn-red btn-sm" href="tel:+573117082496" data-es="Llamar" data-en="Call">Llamar</a>
+    <a class="btn btn-sm" style="background:#25d366;color:#fff" href="https://wa.me/573117082496" target="_blank" rel="noopener">WhatsApp</a>
+    <a class="btn btn-sm" style="background:var(--navy);color:#fff" href="https://www.instagram.com/activeenglishacademy/" target="_blank" rel="noopener">Instagram</a>
+    <a class="btn btn-sm" style="background:#1877f2;color:#fff" href="https://www.facebook.com/search/top?q=Active%20English%20Academy%20Caucasia" target="_blank" rel="noopener">Facebook</a>
+   </div>
+   <div class="expo"><img src="img/stand-expo.jpg" alt="Stand de Active English Academy en ExpoCaucasia 2026"><span data-es="Nuestro stand en ExpoCaucasia 2026" data-en="Our booth at ExpoCaucasia 2026">Nuestro stand en ExpoCaucasia 2026</span></div>
+  </div>
+  <iframe class="reveal" loading="lazy" title="Mapa" src="https://www.google.com/maps?q=Carrera+2+%2326-26,+El+Carmen,+Caucasia,+Antioquia&output=embed"></iframe>
+ </div>
+</section>
+
+<footer>
+ <b>Active English Academy</b> · <span data-es="Te comunica con el mundo" data-en="Connecting you with the world">Te comunica con el mundo</span><br>
+ Cra 2da #26-26, 2do piso, Barrio El Carmen · Caucasia, Antioquia · 311 708 2496<br>
+ <span data-es="Licencia de uso: 6 meses (7 nov 2026 – 7 may 2027)" data-en="License: 6 months (Nov 7, 2026 – May 7, 2027)">Licencia de uso: 6 meses (7 nov 2026 – 7 may 2027)</span><br>
+ <b>Desarrollada por Vibras Positivas HM — Derechos de Autor Reservados</b> · <a href="https://vibraspositivashm.com" target="_blank" rel="noopener">vibraspositivashm.com</a>
+</footer>
+
+<a class="wa" href="https://wa.me/573117082496?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20los%20cursos%20de%20ingl%C3%A9s" target="_blank" rel="noopener" data-es="Escríbenos" data-en="Text us">Escríbenos</a>
+
+<script>
+let L=localStorage.getItem('aea-lang')||'es';
+const T=(es,en)=>L==='es'?es:en;
+const WA='573117082496';
+
+/* Idioma */
+function applyLang(){
+ document.documentElement.lang=L;
+ document.querySelectorAll('[data-es]').forEach(e=>{e.innerHTML=e.dataset[L]});
+ document.getElementById('lang').textContent=L==='es'?'EN':'ES';
+ renderMode();renderPhrase();renderQuiz();buildTicker();
+ document.getElementById('todayLbl').textContent=T('Frase del día · ','Phrase of the day · ')+new Date().toLocaleDateString(L==='es'?'es-CO':'en-US',{timeZone:'America/Bogota',weekday:'long',day:'numeric',month:'long'});
+}
+document.getElementById('lang').onclick=()=>{L=L==='es'?'en':'es';try{localStorage.setItem('aea-lang',L)}catch(e){};applyLang();chatStart()};
+
+/* Rotador de la portada */
+const ROT={es:['niños de 4 a 17 años','profesionales','empresarios','toda la familia'],en:['kids from 4 to 17','professionals','business owners','the whole family']};
+let ri=0;setInterval(()=>{const r=document.getElementById('rot');r.style.opacity=0;setTimeout(()=>{ri=(ri+1)%4;r.textContent=ROT[L][ri];r.style.opacity=1},400)},2600);
+
+/* Cinta */
+function buildTicker(){const w=['Hello!','How are you?','Nice to meet you','Let\'s talk!','I can do it','See you tomorrow','Where are you from?','Welcome to class',T('Grupos reducidos','Small groups'),T('Sala de conversación','Conversation room'),T('Presencial · Virtual · Mixta','In person · Online · Hybrid')];
+ const s=w.map(x=>'<span>'+x+'</span>').join('');document.getElementById('tick').innerHTML=s+s}
+
+/* Modalidades */
+const MODES=[
+ {es:['Presencial',['Clases en nuestra sede del Barrio El Carmen','Profe y compañeros cara a cara','Acceso a la sala de conversación','Grupos reducidos']],en:['In person',['Classes at our El Carmen location','Teacher and classmates face to face','Access to the conversation room','Small groups']],img:'img/profe-nina.jpg'},
+ {es:['Virtual',['Clases en vivo desde tu casa o tu trabajo','Ideal si vives fuera de Caucasia','Mismo método 70% conversacional','Solo necesitas celular o computador e internet']],en:['Online',['Live classes from home or work','Ideal if you live outside Caucasia','Same 70% conversational method','Just a phone or computer and internet']],img:'img/estudiantes.jpg'},
+ {es:['Mixta',['Combina clases presenciales y virtuales','Perfecta para agendas cambiantes','No pierdes clase si viajas','Lo mejor de los dos mundos']],en:['Hybrid',['Mix in-person and online classes','Perfect for changing schedules','Never miss a class when you travel','The best of both worlds']],img:'img/nino.jpg'}];
+let mi=0;
+function renderMode(){const m=MODES[mi][L];document.getElementById('mt').textContent=m[0];document.getElementById('ml').innerHTML=m[1].map(x=>'<li>'+x+'</li>').join('');document.getElementById('mi').src=MODES[mi].img}
+document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#tabs button').forEach(x=>x.classList.remove('on'));b.classList.add('on');mi=+b.dataset.m;renderMode()});
+
+/* Frase del día (cambia cada día, hora Colombia) */
+const PH=[['Practice makes perfect.','La práctica hace al maestro.'],['Never give up on your dreams.','Nunca renuncies a tus sueños.'],['Can you help me, please?','¿Me puedes ayudar, por favor?'],['I would like a coffee, please.','Quisiera un café, por favor.'],['What time is it?','¿Qué hora es?'],['Nice to meet you!','¡Mucho gusto!'],['How much does it cost?','¿Cuánto cuesta?'],['I\'m learning English.','Estoy aprendiendo inglés.'],['Where is the bathroom?','¿Dónde queda el baño?'],['See you next class!','¡Nos vemos la próxima clase!'],['Let\'s keep in touch.','Sigamos en contacto.'],['I have a meeting at nine.','Tengo una reunión a las nueve.'],['Could you repeat that, please?','¿Podrías repetir eso, por favor?'],['The weather is hot today.','Hoy hace calor.'],['Mistakes help me learn.','Los errores me ayudan a aprender.'],['I\'m from Caucasia, Colombia.','Soy de Caucasia, Colombia.']];
+const bogotaDay=()=>{const d=new Date(new Date().toLocaleString('en-US',{timeZone:'America/Bogota'}));return Math.floor(d.getTime()/864e5)};
+let pi=bogotaDay()%PH.length;
+function renderPhrase(){document.getElementById('pEn').textContent=PH[pi][0];document.getElementById('pEs').textContent=L==='es'?PH[pi][1]:'('+PH[pi][1]+')'}
+document.getElementById('nextP').onclick=()=>{pi=(pi+1)%PH.length;renderPhrase()};
+document.getElementById('listen').onclick=()=>{if(!('speechSynthesis' in window))return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(PH[pi][0]);u.lang='en-US';u.rate=.85;speechSynthesis.speak(u)};
+
+/* Test de nivel */
+const Q=[
+ {q:'Hello! My name ___ Ana.',o:['am','is','are'],a:1},
+ {q:'They ___ from Colombia.',o:['is','are','be'],a:1},
+ {q:'Yesterday I ___ to the park.',o:['go','went','gone'],a:1},
+ {q:'She ___ English every day.',o:['study','studies','studying'],a:1},
+ {q:'I have lived here ___ 2020.',o:['since','for','from'],a:0},
+ {q:'If I ___ rich, I would travel.',o:['am','were','be'],a:1},
+ {q:'The report ___ by the manager tomorrow.',o:['will review','will be reviewed','reviews'],a:1},
+ {q:'I wish I ___ harder last year.',o:['studied','had studied','study'],a:1}];
+let qi=0,score=0,done=false;
+function renderQuiz(){const box=document.getElementById('quiz');
+ if(done){const lv=score<=2?['A1',T('Principiante','Beginner')]:score<=4?['A2',T('Básico','Elementary')]:score<=6?['B1',T('Intermedio','Intermediate')]:['B2',T('Intermedio alto','Upper intermediate')];
+  box.innerHTML='<div class="result"><p class="kicker">'+T('Tu nivel aproximado','Your approximate level')+'</p><p class="lvl">'+lv[0]+'</p><p style="font-size:20px;font-weight:800;color:var(--navy)">'+lv[1]+' · '+score+'/'+Q.length+'</p><p style="margin:12px 0;color:#4a4f68">'+T('Es una guía rápida. En la academia te hacen la prueba completa y te ubican en el grupo ideal.','This is a quick guide. At the academy you will get the full test and the ideal group.')+'</p><div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap"><a href="#inscripcion" class="btn btn-red btn-sm">'+T('Inscribirme con este nivel','Sign up with this level')+'</a><button class="btn btn-sm" style="background:var(--soft);color:var(--navy)" id="again">'+T('Repetir','Retry')+'</button></div></div>';
+  document.getElementById('fLvl').value=lv[0]+' ('+score+'/'+Q.length+')';
+  document.getElementById('again').onclick=()=>{qi=0;score=0;done=false;renderQuiz()};return}
+ const it=Q[qi];
+ box.innerHTML='<p class="kicker">'+T('Test de nivel · pregunta ','Level test · question ')+(qi+1)+'/'+Q.length+'</p><div class="progress" style="margin-top:8px"><i style="width:'+(qi/Q.length*100)+'%"></i></div><p class="q">'+it.q+'</p><div class="opts">'+it.o.map((x,i)=>'<button data-i="'+i+'">'+x+'</button>').join('')+'</div>';
+ box.querySelectorAll('.opts button').forEach(b=>b.onclick=()=>{const i=+b.dataset.i;box.querySelectorAll('.opts button').forEach(x=>x.disabled=true);
+  if(i===it.a){b.classList.add('ok');score++}else{b.classList.add('bad');box.querySelectorAll('.opts button')[it.a].classList.add('ok')}
+  setTimeout(()=>{qi++;if(qi>=Q.length)done=true;renderQuiz()},800)})}
+
+/* Chat animado de la sala de conversación */
+const CH=[['a','Hi! What did you do this weekend?'],['b','I went to the river with my family.'],['a','Great! Did you have fun?'],['b','Yes! And now I can say it in English.']];
+let chatT=[];
+function chatStart(){chatT.forEach(clearTimeout);chatT=[];const c=document.getElementById('chat');c.innerHTML='';
+ CH.forEach((m,i)=>chatT.push(setTimeout(()=>{const d=document.createElement('div');d.className='msg '+m[0];d.textContent=m[1];c.appendChild(d);requestAnimationFrame(()=>d.classList.add('show'))},700+i*1300)))}
+
+/* Contadores y aparición al hacer scroll */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target;el.classList.add('in');
+ if(el.classList.contains('count')){const to=+el.dataset.to;let n=0;const st=Math.max(1,Math.ceil(to/40));const t=setInterval(()=>{n=Math.min(to,n+st);el.textContent=n;if(n>=to)clearInterval(t)},30)}
+ if(el.id==='chat')chatStart();io.unobserve(el)}),{threshold:.3});
+document.querySelectorAll('.reveal,.count,#chat').forEach(e=>io.observe(e));
+
+/* Preinscripción por WhatsApp */
+document.getElementById('form').onsubmit=e=>{e.preventDefault();
+ const v=id=>document.getElementById(id).value.trim();
+ const s=id=>{const x=document.getElementById(id);return x.options[x.selectedIndex].text};
+ const txt=T('Hola Active English Academy, quiero preinscribirme:','Hello Active English Academy, I want to pre-register:')+'\n'+
+ T('Estudiante: ','Student: ')+v('fName')+'\n'+T('Edad: ','Age: ')+v('fAge')+'\n'+T('Programa: ','Program: ')+s('fProg')+'\n'+T('Modalidad: ','Format: ')+s('fMode')+'\n'+T('Horario: ','Schedule: ')+s('fTime')+(v('fLvl')?'\n'+T('Nivel del test: ','Test level: ')+v('fLvl'):'')+(v('fMsg')?'\n'+T('Comentario: ','Comment: ')+v('fMsg'):'')+'\n\n'+T('(Enviado desde la app de Active English Academy)','(Sent from the Active English Academy app)');
+ window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(txt),'_blank')};
+
+/* PWA */
+if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
+let dp;window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();dp=e;const b=document.getElementById('install');b.style.display='inline-block';b.onclick=async()=>{dp.prompt();await dp.userChoice;b.style.display='none';dp=null}});
+
+applyLang();
+</script>
+</body>
+</html>
