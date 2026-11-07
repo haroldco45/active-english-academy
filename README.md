@@ -26,6 +26,7 @@ manifest.json
 sw.js
 README.md
 img/og.jpg  img/icon-192.png  img/icon-512.png
+img/logo.jpg  img/grupo.jpg  img/clase-ajedrez.jpg
 img/profe-nina.jpg  img/nino.jpg  img/estudiantes.jpg  img/stand-expo.jpg
 ```
 
