@@ -31,7 +31,7 @@ img/profe-nina.jpg  img/nino.jpg  img/estudiantes.jpg  img/stand-expo.jpg
 
 ## Publicar
 1. Subir todo al repo `haroldco45/active-english-academy` (respetando la carpeta `img/`).
-2. Conectar el repo en Netlify con el nombre `active-english-academy` → https://active-english-academy.netlify.app
+2. Conectar el repo en Netlify con el nombre `active-english-academy` → https://active-english-academ.netlify.app
 3. Si Netlify asigna otro nombre, cambiar la URL en las etiquetas `og:image`, `og:url` y `twitter:image` de `index.html`.
 
 ## Licencia
